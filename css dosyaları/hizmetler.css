@@ -49,11 +49,13 @@ header {
     margin-bottom: 10px; 
 }
 
-.hizmetler-item p {
+.hizmetler-item a {
     font-size: 1rem; 
     color: #30cda5; 
 }
-
+.hizmetler-item a:hover {
+    color: #27f1be;
+}
 
 @media (max-width: 1200px) {
     .hizmetler-container {
@@ -84,6 +86,7 @@ header {
 #hizmetler-p{
     font-size: 20px;
     font-weight: bold;
+    text-decoration: none;
 }
 img{
     border-radius: 15px;

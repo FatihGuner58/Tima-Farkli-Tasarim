@@ -1,0 +1,134 @@
+.hizmetler-title{
+    background-size: 400px;
+    background-position-y:300px ;
+    height:150px ;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    background-color:#173251;
+    font-weight: bold;
+    font-size: 50px;
+    padding-top:100px ;
+}
+#hizmetler-right{
+    margin-top: 30px;
+}
+.hizmetler-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 sütunlu grid */
+    gap: 20px; 
+    margin: 20px auto;
+    max-width: 1200px; 
+    padding: 0 20px; 
+}
+.container-buyukveri {
+    display: flex;
+    flex-direction: column; /* İçeriği dikey olarak sıralar */
+    align-items: flex-start; /* İçeriği sola hizalar */
+  }
+  
+  .menu-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* İçeriği sola hizalar */
+    padding: 20px; /* Opsiyonel: Kapsayıcının içindeki boşlukları düzenler */
+    flex: 1; /* Menü başlığının genişliği esnek olsun */
+}
+  
+  .menu-title button {
+    margin: 5px 0; /* Butonlar arasına boşluk ekler */
+    width: 100%; /* Butonun bulunduğu alanı kaplar */
+    border: 1px solid; /* Buton kenarlığını tanımlar */
+    border-radius: 10px; /* Buton kenarlarını yuvarlar */
+    background-color: rgb(245, 243, 243);
+    height: 60px;
+    font-size: 20px;
+    background-color: rgb(245, 243, 243);
+    border-color: rgb(245, 243, 243);
+  }
+  
+  .menu-title button:hover {
+    background-color: #173251;
+    color: white;
+  }
+  
+  .menu-title button a {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    text-decoration: none;
+    color: inherit;
+    box-sizing: border-box;
+    text-align: left;
+  }
+  
+  #iletisim-input {
+    width: 100%;
+    max-width: 350px; /* Genişlik sınırlaması */
+    height: 30px;
+    border: none;
+    margin-top: 5px;
+  }
+  
+  #gonder {
+    margin-top: 10px;
+    background-color: rgb(102, 69, 202);
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 5px;
+  }
+  .img-and-write img {
+    position: relative;
+    max-width: 100%; /* Resmi kapsayıcıya göre boyutlandırır */
+    height: auto; /* Yüksekliği otomatik yapar */
+    flex: 1; /* Resim ve yazının genişliği esnek olsun */
+}
+  /* Medya sorguları ile responsive düzenleme */
+  @media (max-width: 768px) {
+    .container-buyukveri {
+      display: flex; /* İçeriği yatay olarak hizalar */
+      justify-content: space-between; /* Boşlukları eşit dağıtır */
+      align-items: flex-start; /* Üstten hizalar */
+      flex-wrap: wrap; /* İçerik sığmadığında taşmayı önler */
+    }
+  
+    .menu-title {
+      padding: 10px; /* Daha küçük ekranlarda padding azaltılır */
+    }
+  
+    .menu-title button {
+      width: 100%; /* Buton genişliği tam genişlikte olacak */
+      font-size: 16px; /* Küçük ekranlarda font boyutunu küçültür */
+      height: 50px; /* Buton yüksekliğini küçültür */
+    }
+  
+    #iletisim-input {
+      width: 100%; /* Genişlik tam ekran genişliğinde olacak */
+    }
+  
+    #gonder {
+      width: 100%; /* Genişlik tam ekran genişliğinde olacak */
+      max-width: 150px; /* Maksimum genişlik sınırı */
+      height: 40px; /* Yüksekliği artırır */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .menu-title {
+      padding: 5px; /* Daha küçük ekranlarda padding daha da azaltılır */
+    }
+  
+    .menu-title button {
+      font-size: 14px; /* Küçük ekranlarda font boyutunu daha da küçültür */
+      height: 40px; /* Buton yüksekliğini daha da küçültür */
+    }
+  
+    #iletisim-input {
+      font-size: 14px; /* Girdi alanlarının font boyutunu küçültür */
+    }
+  
+    #gonder {
+      font-size: 14px; /* Gönder butonunun font boyutunu küçültür */
+      max-width: 100%; /* Gönder butonunu tam genişlikte yapar */
+    }
+  }
