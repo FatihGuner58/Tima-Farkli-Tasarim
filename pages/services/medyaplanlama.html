@@ -52,8 +52,42 @@
           </div>
       </header>
       <div class="hizmetler-title">
-        <h1 id="hizmetler-right" data-tr="Medya Planlama" data-en="media planning" data-fr="planification média" >Medya Planlama</h1>
+        <h1 id="hizmetler-right" data-tr="Medya Planlama" data-en="media planning" data-fr="planification média">Medya Planlama</h1>
     </div>
+    <div class="container-buyukveri">
+      <div class="menu-title">
+        <button><a id="active" href="medyaplanlama.html"data-tr="Medya Planlama" data-en="media planning" data-fr="planification média">Medya Planlama</a></button>
+        <button><a href="buyuk-ver-pazarlaması.html"data-tr="Büyük Veri Pazarlaması" data-en="Big Data Marketing" data-fr="Marketing des mégadonnées">Büyük veri Pazarlaması</a></button>
+        <button><a href="performans-pazarlama.html"data-tr="Performans Pazarlama" data-en="performance marketing" data-fr="marketing à la performance">Performans Pazarlama</a></button>
+        <button><a href="programatik-açık-hava-reklamları.html" data-tr="Programatik Açık Hava Reklamları" data-en="Programmatic Outdoor Advertising" data-fr="Publicité Extérieure Programmatique">Programatik Açık Hava Reklamları</a></button>
+        <button><a href="programatik.html"data-tr="Programatik" data-en="programmatic" data-fr="programmatique">Programatik</a></button>
+        <button><a href="radyo-reklamları.html"data-tr="Raydo Reklamları" data-en="Raydo Advertisements" data-fr="Publicités Raydo">Radyo Reklamları</a></button>
+        <button><a href="sinema-reklamı.html"data-tr="Sinema Reklamları" data-en="Cinema Advertisements" data-fr="Publicités cinéma">Sinema Reklamları</a></button>
+        <button><a href="televiyon-reklamlari.html"data-tr="Televizyon Reklamları" data-en="Television Advertisements" data-fr="Publicités télévisées">Televizyon Reklamları</a></button>
+      
+        <h2 id="iletisim-ulasın" data-tr="İletişim" data-en="Communication" data-fr="Communication">İletişim</h2>
+      <input id="iletisim-input" type="text" placeholder="Ad Soyad">
+      <input id="iletisim-input" type="text" placeholder="Mail">
+      <input id="iletisim-input" type="text" placeholder="Telefon">
+      <input id="iletisim-input" type="text" placeholder="Konu">
+      <input id="iletisim-input" type="text" placeholder="Mesaj">
+      <input id="gonder" type="submit" placeholder="GÖNDER">
+      </div>
+      <div class="img-and-write">
+        <img id="buyukveri-image" src="../../icons/247--medya-planlama.webp" alt="" width="700" height="450">
+        <div class="buyukveri-writes">
+            <h1 class="text-heading">Büyük Veri Pazarlaması</h1>
+            <p class="text-paragraph">Tima Medya‘nın kendini rakiplerinden ayrıştırdığı en önemli konu ise belki de Büyük Veri başlığında ki tecrübe ve bilgi</p>
+            <p class="text-paragraph">onun boyutudur. Pazarlamanın Geleceği; kitlelerin bilgileri, ilgi alanları, satın alma alışkanlıkları ve kişilik özellikleri.</p>
+            <p class="text-paragraph">başlıkları, kişilik haklarına hiçbir zarar vermeden, markalarla buluşturmakta yatmaktadır. Bu bize platform ve yayıncı bağımsız</p>
+            <p class="text-paragraph">olarak çok daha doğru reklam içerikleri hazırlayabilmemizi ve programatik gibi modellerle doğru zamanda doğru kişiye doğru</p> 
+            <p class="text-paragraph">mesajla ulaşmamızı sağlar. Bu konuda Türkiye ve yurt dışındaki en büyük hizmet sağlayıcılarla yaptığımız iş birlikleri ve</p>
+            <p class="text-paragraph">anlaşmalar sayesinde, markanıza aklınıza bile gelemeyecek yaratıcı pazarlama teknikleri verebiliriz.</p>
+        </div>
+      </div>
+    </div>
+
+    
     <footer>
         <div class="footer-container">
         <div class="footer1">
@@ -131,6 +165,28 @@
    <script src="../../search.js"></script>
    <script src="../../script.js"></script>
    <script src="../../language.js"></script>
+   <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    function formatText(text, maxWordsPerLine) {
+        const words = text.split(' ');
+        let formattedText = '';
+        for (let i = 0; i < words.length; i += maxWordsPerLine) {
+            formattedText += words.slice(i, i + maxWordsPerLine).join(' ') + '<br>';
+        }
+        return formattedText;
+    }
 
+    function applyFormatting(selector, maxWordsPerLine) {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(element => {
+            element.innerHTML = formatText(element.textContent, maxWordsPerLine);
+        });
+    }
+
+    // Başlıklar ve paragraflar için formatlama uygulama
+    applyFormatting('.text-heading', 13); // Başlıklar için 20 kelime sınırı
+    applyFormatting('.text-paragraph', 13); // Paragraflar için 20 kelime sınırı
+});
+    </script>
 </body>
 </html>

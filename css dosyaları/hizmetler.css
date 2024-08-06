@@ -35,6 +35,7 @@ header {
 }
 
 .hizmetler-item {
+    flex-direction: column;
     background-color: #f9f9f9; 
     border: 1px solid #ddd;
     border-radius: 8px; 
@@ -54,6 +55,7 @@ header {
     color: #30cda5; 
 }
 .hizmetler-item a:hover {
+   
     color: #27f1be;
 }
 
@@ -77,6 +79,9 @@ header {
 #icon{
     width: 250px;
     height: 180px;
+}
+#icon :hover{
+    color: #000;
 }
 .hizmetler-item:hover{
     background-color: #173251;
